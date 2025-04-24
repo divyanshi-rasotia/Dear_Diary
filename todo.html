@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Today's Plan</title>
+  <link rel="stylesheet" href="todo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="planner-container">
+    <h1>Today's Plan</h1>
+
+    <section class="section mood">
+      <h2>Today I feel</h2>
+      <div class="mood-options">
+        <img src="assets/happy.png" class="mood-img" alt="Happy" title="Happy">
+        <img src="assets/neutral.png" class="mood-img" alt="Neutral" title="Neutral">
+        <img src="assets/sad.png" class="mood-img" alt="Sad" title="Sad">
+        <img src="assets/angry.png" class="mood-img" alt="Angry" title="Angry">
+        <img src="assets/excited.png" class="mood-img" alt="Excited" title="Excited">
+      </div>
+    </section>
+
+    <section class="section priorities">
+        <h2>3 Top Priorities</h2>
+        <ul id="priority-list">
+          <li><input type="checkbox" class="task-checkbox"> <span contenteditable="true" class="task-text"> </span></li>
+          <li><input type="checkbox" class="task-checkbox"> <span contenteditable="true" class="task-text"> </span></li>
+          <li><input type="checkbox" class="task-checkbox"> <span contenteditable="true" class="task-text"> </span></li>
+        </ul>
+      </section>
+      
+      <section class="section notes">
+        <h2>Can Be Done</h2>
+        <ul id="notes-list">
+          <li><input type="checkbox" class="task-checkbox"> <span contenteditable="true" class="task-text"> </span></li>
+          <li><input type="checkbox" class="task-checkbox"> <span contenteditable="true" class="task-text"> </span></li>
+          <li><input type="checkbox" class="task-checkbox"> <span contenteditable="true" class="task-text"> </span></li>
+        </ul>
+      </section>
+
+    <section class="section water">
+      <h2>Water Intake</h2>
+      <div class="droplets">
+        <span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span>
+        <span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span>
+      </div>
+    </section>
+
+    <section class="section completed">
+      <h2>Completed</h2>
+      <ul id="completed-list">
+        <li contenteditable="true"></li>
+        <li contenteditable="true"></li>
+      </ul>
+    </section>
+
+    <section class="section tomorrow">
+      <h2>For Tomorrow</h2>
+      <textarea placeholder="Things to carry forward..."></textarea>
+    </section>
+
+    <a href="index.html" class="home-button">← Back to Home</a>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>

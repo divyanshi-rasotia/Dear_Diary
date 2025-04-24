@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Garamond, serif;
+    background-color: #fffafc;
+    background-size: cover;
+  }
+  
+  .planner-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px 20px;
+    background: url('assets/bg.jpg') no-repeat center top;
+    background-size: cover; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #dd6e8e;
+    font-family: Garamond, serif;
+  }
+  
+  .section {
+    margin-bottom: 25px;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: #fff4f8;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    min-height: 35px;
+  }
+  
+  ul li:focus {
+    outline: 2px dashed #f8c4d8;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 80px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #fff4f8;
+    resize: vertical;
+  }
+  .mood-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .mood-img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .mood-img:hover {
+    transform: scale(1.2);
+  }
+  
+  .mood-img.active {
+    outline: 3px solid #fcb1c2;
+    border-radius: 50%;
+  }
+  
+  .task-text {
+    padding-left: 8px;
+    outline: none;
+  }
+  
+  .completed-item {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .droplets {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .drop {
+    width: 25px;
+    height: 25px;
+    background-color: #ffe2eb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .drop.active {
+    background-color: #f48fb1;
+  }
+  
+  .home-button {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #b55e72;
+    font-size: 1rem;
+  }
+
+  /* Make mood images smaller on smaller screens */
+@media (max-width: 768px) {
+  .mood-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .planner-container {
+    padding: 20px 15px;
+  }
+
+  ul li {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  textarea {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .drop {
+    width: 20px;
+    height: 20px;
+  }
+
+  .home-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .mood-options {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .mood-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  .planner-container {
+    background-size: cover;
+    background-position: center;
+  }
+}

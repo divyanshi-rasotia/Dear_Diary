@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #b28f7c;
+  }
+  @keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .comfort-heading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -50px;
+  }
+  
+  .comfort-heading p {
+    font-family: Garamond, serif;
+    font-size: 2.5rem;
+    color: #fff4ed;
+    display: inline-block;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    animation:fadeInSlideUp 1.2s ease-out;
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px 20px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .grid-box {
+    background-color: #f5e8db;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .logo-box {
+    grid-column: span 2;
+    font-family: Garamond, serif;
+    font-size: 1.6rem;
+    color: #5a3e36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7d9c4;
+  }
+  .logo-box {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .logo-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-20deg);
+    animation: shine 4s infinite;
+  }
+  
+  @keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+  }
+  .grid-box img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    padding: 10px;
+    margin: 0 auto 5px;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  .grid-box p {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin: 0;
+    color: #4a3b37;
+  }
+  
+  .clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .clickable:hover {
+    transform: scale(1.05);
+    background-color: #f3d7be;
+  }
+  
+  .bear-box img {
+    height:180px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .calendar-box {
+    background-color: #f3d6ba;
+    padding: 20px 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    grid-column: span 2;
+  }
+  
+  #calendar-header h4 {
+    margin: 0 0 10px;
+    font-family: 'Patrick Hand', cursive;
+    color: #5a3e36;
+    text-align: center;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    width:100%;
+    max-width: 280px;
+  }
+  
+  .calendar-cell {
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .calendar-cell.header {
+    background-color: transparent;
+    font-weight: bold;
+    color: #5a3e36;
+  }
+  
+  .calendar-cell.today {
+    background-color: #ffbda3;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .calendar-cell.empty {
+    background-color: transparent;
+  }
+
+  .deco-box {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcefe3;
+    padding:0;
+    max-width: 400px;
+    margin-left: -85px;
+  }
+  .deco-box.grid-box{
+    padding:0;
+  }
+  .deco-box img {
+   width: 100%;
+   max-width: 450px;
+   height: 280px;
+   object-fit: cover;
+   border-radius: 20px;
+   display:block;
+   padding: 0;
+  }
+
+  .footer {
+    text-align: center;
+    color: #fffaf4;
+    font-family: Garamond, serif;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  /* responsive layout */
+  @media (max-width: 768px) {
+    .page-container{
+        padding: 0 10px;
+    }
+    .grid-wrapper {
+        padding: 20px 15px;
+        gap: 12px;
+      }
+    .comfort-heading p {
+      font-size: 3rem;
+      padding: 8px 12px;
+    }
+  
+    .grid-box p {
+      font-size: 1rem;
+    }
+  
+    .logo-box {
+      font-size: 2rem;
+    }
+  
+    .calendar-box{
+        grid-column: span 2;
+      width: 94%;
+    }
+    .deco-box {
+      grid-column: span 2;
+      width: 100%;
+    }
+    .calendar-grid {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .deco-box {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  
+    .deco-box img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .footer {
+      font-size: 0.85rem;
+      padding: 10px 20px;
+    }
+  
+    .bear-box img {
+      height: 120px;
+      margin-top: 40px;
+    }
+  }
+  @media (max-width: 480px) {
+    .grid-wrapper {
+      padding: 20px 10px;
+      gap: 12px;
+    }
+  
+    .comfort-heading p {
+      font-size: 3rem;
+    }
+  
+    .grid-box {
+      padding: 10px;
+    }
+  }

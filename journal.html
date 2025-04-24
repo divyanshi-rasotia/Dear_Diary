@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dear Diary - Scrapbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="journal.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-title">
+        <a href="index.html" class="back-arrow" title="Back to Home">&#8592;</a>
+        Dear Diary
+      </div>
+      <div class="toolbar-toggle" id="menu-toggle">☰</div>
+  
+      <div class="toolbar-content" id="toolbar-content">
+        <div class="left-controls">
+          <button id="upload-btn">Upload Image</button>
+          <input type="file" id="upload-img" accept="image/*" style="display: none;">
+          <button id="add-sticker">Add Sticker</button>
+          <button id="add-text">Add Text</button>
+          <button id="pen-tool">Draw</button>
+          <button id="eraser-tool">Eraser</button>
+        </div>
+  
+        <div class="right-controls">
+          <select id="text-size">
+            <option value="16px">Small</option>
+            <option value="24px" selected>Medium</option>
+            <option value="32px">Large</option>
+          </select>
+          <input type="color" id="text-color" value="#333333" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scrapboard"></div>
+  <canvas id="drawing-canvas"></canvas>
+<div id="draw-controls" class="hidden">
+  <select id="pen-size">
+    <option value="2">Thin</option>
+    <option value="5" selected>Medium</option>
+    <option value="10">Thick</option>
+  </select>
+  <input type="color" id="pen-color" value="#000000">
+  <button id="clear-draw">Clear</button>
+  <button id="close-draw">Done</button>
+</div>
+  <div id="sticker-gallery" class="sticker-gallery hidden">
+    <div class="gallery-header">
+      <span>Choose a Sticker</span>
+      <button id="close-gallery">✖</button>
+    </div>
+    <div class="gallery-content">
+      <img src="assets/sticker1.png" class="gallery-sticker">
+      <img src="assets/sticker2.png" class="gallery-sticker">
+      <img src="assets/sticker3.png" class="gallery-sticker">
+      <img src="assets/sticker4.png" class="gallery-sticker">
+      <img src="assets/sticker5.png" class="gallery-sticker">
+      <img src="assets/sticker6.png" class="gallery-sticker">
+      <img src="assets/sticker7.png" class="gallery-sticker">
+      <!-- Add more stickers here -->
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <script src="journal.js"></script>
+</body>
+</html>

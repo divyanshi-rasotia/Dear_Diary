@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dear Diary</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+    <div class="comfort-heading">
+        <p>Welcome to your comfort space</p>
+    </div>
+
+  <div class="grid-wrapper">
+
+    <!-- Title Box -->
+    <div class="grid-box logo-box">
+      <h1>Dear Diary</h1>
+    </div>
+
+    <!-- Write a Note -->
+    <div class="grid-box clickable" onclick="location.href='notepad.html'">
+      <img src="assets/notepad.png" alt="Notepad Icon">
+      <p>Write a Note</p>
+    </div>
+
+    <!-- To-Do -->
+    <div class="grid-box clickable" onclick="location.href='todo.html'">
+      <img src="assets/todo.png" alt="To-Do Icon">
+      <p>To-Do List</p>
+    </div>
+
+    <!-- Digital Journal -->
+    <div class="grid-box clickable" onclick="location.href='journal.html'">
+      <img src="assets/journal.png" alt="Journal Icon">
+      <p>Digital Journal</p>
+    </div>
+
+    <!-- Bear sticker -->
+    <div class="grid-box bear-box">
+      <img src="assets/bear.png" alt="Bear Sticker" />
+    </div>
+
+    <!-- Calendar -->
+    <div class="grid-box calendar-box">
+        <div id="calendar-header"></div>
+        <div id="calendar-grid" class="calendar-grid"></div>
+    </div>
+
+    <!-- Decorative image bottom-right -->
+    <div class="grid-box deco-box">
+    <img src="assets/deco.jpg" alt="Cute Decoration" />
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Made with love for your cozy moments · © 2025 Dear Diary</p>
+</footer>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

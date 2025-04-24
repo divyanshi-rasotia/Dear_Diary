@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Garamond, serif;
+    background-color: #fbe8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .notepad-container {
+    background-color: #fff7f0;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .notepad-container h1 {
+    font-family: Garamond, serif;
+    font-size: 2rem;
+    color: #5a3e36;
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    width: 90%;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2rem;
+    background-color: #fffaf3;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    resize: vertical;
+    outline: none;
+  }
+  .bear-deco {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 200px;
+  }
+  @media (max-width: 768px) {
+    .bear-deco {
+      width: 150px;
+      bottom: -10px;
+      right: 0px;
+    }
+    .notepad-container{
+        padding:20px 10px;
+    }
+  }
+  .btn-group {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #ffbda3;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 8px;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f59b82;
+  }
+
+  .home-button {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #b55e72;
+    font-size: 1rem;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffe4ec;
+    color: #d6336c;
+    border: 2px dashed #f48fb1;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 9999;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
